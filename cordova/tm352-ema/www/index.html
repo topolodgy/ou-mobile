@@ -37,7 +37,7 @@
         <tr>
         <td align="left">Client:</td>
         <td align="right"><input type="number" id="clientid" name="clientid" min="1" max="2" required /></td>
-        <td align="right"><button type="button" id="btn-login" onclick="controller.beginOrder()"> Begin Order </button></td>
+        <td align="right"><button type="button" id="btn-login" onclick="controller.createOrder()"> Begin Order </button></td>
         </tr>
       </table>
     </form>
@@ -54,16 +54,33 @@
 
       <table>
         <tr>
-        <td>Number:</td>
-        <td><input type="number" id="number" name="number" min="1" max="65535" required /></td>
-        <td>Agreed Price:</td>
-        <td><input type="number" id="price" name="price" min="0" max="65535" step="0.01" required /></td>
-        </tr>
-        <tr>
-        <td>Subtotal:</td>
-        <td><input type="number" id="subtotal" name="subtotal" min="1" max="65535" required /></td>
+         <td>Number:</td>
+         <td><input type="number" id="number" name="number" min="1" max="65535" required /></td>
+         <td>Agreed Price:</td>
+         <td><input type="number" id="price" name="price" min="0" max="65535" step="0.01" required /></td>
         </tr>
       </table>
+
+    <div style="text-align:left; width:100%; padding:0; margin-bottom:0.2rem">
+      <button type="button" id="btn-prev" onclick="controller.addToOrder()"> Add to Order </button>
+      <span id="out"></span>
+      <button type="button" id="btn-next"> End Order </button>
+    </div>
+
+    <table>
+      <tr>
+       <td>Subtotal:</td>
+       <td id="subtotal" name="subtotal" min="0" max="65535" required /></td>
+      </tr>
+      <tr>
+       <td>VAT:</td>
+       <td id="vat" name="vat" min="0" max="65535" required /></td>
+      </tr>
+      <tr>
+        <td>Total:</td>
+        <td id="total" name="total" min="0" max="65535" required /></td>
+      </tr>
+    </table>
 
    <div id="mapContainer" style="height: 55vh; width: auto"></div>
 

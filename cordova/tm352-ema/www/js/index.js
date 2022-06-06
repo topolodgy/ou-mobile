@@ -155,7 +155,7 @@ function ClientOrder() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             enableHighAccuracy: true,
         });
-    }
+    };
 
     // TODO Update the map with addresses for orders from the Client Order API
     function updateMap() {
@@ -202,44 +202,73 @@ function ClientOrder() {
         //       e.g. addMarkerToMap("Milton Keynes Central");
     }
 
-    var clientInfo = [];
-    var clientAddr = "";
-    var clientLat = "";
-    var clientLon = "";
+
+    var newClientAddr;
 
     function getClientAddress(oucu, clientid) {
 
         function onListSuccess(obj) {
             console.log("Received client object ", obj); 
-            var address = obj.data[0].address;
-            console.log("Client Address: " + address);
-            clientAddr = address;
+            newClientAddr = obj.data[0].address;
+            console.log("newClientAddr var is " + newClientAddr);
         }
 
         // Get client info:
         var clientUrl = url + "clients/" + clientid + "?OUCU=sl23479&password=B1dSM4I4" ;
         console.log("user: " + oucu + " sending GET to " + clientUrl + "for client ID " + clientid);
         $.ajax(clientUrl, { type: "GET", data: {}, success: onListSuccess });
+        return onListSuccess;
     }
 
-    function getClientLocation(clientAddr) {
+
+
+    var clientLat = 0;
+    var clientLon = 0;
+
+    function getClientLocation() {
 
         function onListSuccess(obj) {
+            console.log("received address is " + newClientAddr);
             console.log("GET Client Info: received obj", obj);
-            clientLat =  obj.data[0].lat;
-            clientLon =  obj.data[0].lon;    
-            console.log("GET Client Info: Location identified", clientLat, clientLon);   
+            clientLat =  obj[0].lat;
+            clientLon =  obj[0].lon;   
+            console.log("GET Client Info: Location identified", obj);   
         }
 
         // Get client Lat/Lon:
-        var geoUrl = "http://nominatim.openstreetmap.org/search/" + clientAddr + "?format=json&countrycodes=gb" ;
-        console.log("Sending GET to Geo Service");
+        var geoUrl = "http://nominatim.openstreetmap.org/search/" + newClientAddr + "?format=json&countrycodes=gb";
+        console.log("Sending GET to Geo Service for address " + newClientAddr);
         $.ajax(geoUrl, { type: "GET", data: {}, success: onListSuccess });
 
+        return onListSuccess;
     }
+
+
+
+    function createOrder(oucu, clientid) {
+
+        var addr = getClientAddress(oucu, clientid);
+        console.log("createOrder: Client Address: " + addr);
+
+        var location = getClientLocation(newClientAddr);
+        console.log("createOrder: Client Location: " + newClientAddr);
+
+        function onListSuccess(obj) {
+            console.log("Order created!", obj);
+        }
+
+        // Get all the orders relating to a salesperson:
+        var oUrl = url + "orders" ;
+
+        console.log("orders: Sending POST to " + oUrl);
+        $.ajax(oUrl, { type: "POST", data: {client_id: clientid, latitude: clientLat, longitude: clientLat, OUCU: "sl23479", password: "B1dSM4I4"}, success: onListSuccess });
+        return onListSuccess;
+    }
+
 
     //Initialise orders array 
     var oArray = [];
+
     function getOrders() {
 
         function onListSuccess(obj) {
@@ -285,7 +314,7 @@ function ClientOrder() {
         return {
             prevWidget: function () {
                 wPos && wPos--;
-                console.log("prev: " + wPos);
+                console.log("Previous Widget: " + wPos);
                 var img = document.createElement("img");
                 img.src = wArray[wPos].url;
                 img.setAttribute("style", "width: 50%;");
@@ -308,7 +337,7 @@ function ClientOrder() {
             },
             nextWidget: function () {
                 wPos + 1 < wArray.length && wPos++;
-                console.log("next: " + wPos);
+                console.log("Next Widget: " + wPos);
                 var img = document.createElement("img");
                 img.src = wArray[wPos].url;
                 img.setAttribute("style", "width: 50%;");
@@ -336,6 +365,36 @@ function ClientOrder() {
     document.getElementById('btn-next').addEventListener('click', index.nextWidget);
     document.getElementById('btn-prev').addEventListener('click', index.prevWidget);
 
+
+    function addToOrder(oucu, pass, number, price) {
+
+        var subtotal = number * price;
+        console.log("addToOrder: subtotal is " + subtotal);
+        document.getElementById("subtotal").innerHTML = subtotal + " GBP";
+
+        var vat = subtotal * 0.2;
+        console.log("addToOrder: vat is " + vat);
+        document.getElementById("vat").innerHTML = vat + " GBP";
+
+        var total = subtotal + vat;
+        console.log("addToOrder: total is " + total);
+        document.getElementById("total").innerHTML = total + " GBP";
+
+        var widgetid = wArray[wPos].id;
+        console.log("Widget ID = " + widgetid);
+
+        function onSuccess(obj) {
+            console.log("Order amended!", obj);
+        }
+
+        // Get all the orders relating to a salesperson:
+        var oUrl = url + "order_items" ;
+
+        console.log("Order addition: Sending POST to " + oUrl);
+        $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
+        return onSuccess;
+    }
+
     // Set initial HERE Map position
     centreMap();
 
@@ -357,13 +416,12 @@ function ClientOrder() {
         updateMap();
     };
 
-    this.nextWidget = function () {
-        nextWidget();
-    };
 
-    this.beginOrder = function () {
-        //var clientid = document.getElementById("clientid").value;
-        var oucu = document.getElementById("oucu").value;
+    this.createOrder = function () {
+        var clientid = document.getElementById("clientid").value;
+        //var oucu = document.getElementById("oucu").value;
+        var oucu = "sl23479";
+        var pass = document.getElementById("pass").value;
         if (oucu.match(/[a-z].*[0-9]$/)) {
             console.log("OUCU match found");
         }
@@ -371,15 +429,23 @@ function ClientOrder() {
             console.log("OUCU match not found");
         }
 
-        
-        console.log("Orders: " + oArray);
+        createOrder(oucu, clientid);
 
-        //getClientLocation(clientAddr);
-        //console.log("client location: " + clientLat + " " + clientLon + " received");
     };
-
-    //this.addToOrder = function () {
-    //    var subTotal = wArray[wPos].pence_price * document.getElementById("number");
-    //};
   
+
+    this.addToOrder = function () {
+        var oucu = document.getElementById("oucu").value;
+        //var oucu = "sl23479";
+        var pass = document.getElementById("pass").value;
+        //var pass = "B1dSM4I4";
+
+        var number = document.getElementById("number").value;
+        console.log("addToOrder: number is " + number);
+        var price = document.getElementById("price").value;
+        console.log("addToOrder: price is " + price);
+
+        addToOrder(oucu, pass, number, price);
+
+    };
 }
