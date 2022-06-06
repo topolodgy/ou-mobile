@@ -255,6 +255,9 @@ function ClientOrder() {
         return onListSuccess;
     }
 
+    // Populate orders array
+    getOrders();
+
     //Initialise widget array    
     var wArray = [];
     
@@ -273,20 +276,18 @@ function ClientOrder() {
         return onListSuccess;
     }
 
-
-
     // Populate widget array
     getWidgets();
-    var wPos;
+    var wPos = 0;
 
     // Set widget array position, iterate across array and display widgets
-    var index = function displayWidget (i) {
+    var index = function displayWidget (wPos) {
         return {
             prevWidget: function () {
-                i && i--;
-                console.log("prev: " + i);
+                wPos && wPos--;
+                console.log("prev: " + wPos);
                 var img = document.createElement("img");
-                img.src = wArray[i].url;
+                img.src = wArray[wPos].url;
                 img.setAttribute("style", "width: 50%;");
                 var imgDiv = document.getElementById("widget-img");
                 var existingImg = imgDiv.firstChild;
@@ -299,17 +300,17 @@ function ClientOrder() {
                 imgDiv.setAttribute("style", "text-align:left");
     
                 var desc = document.getElementById("widget-desc");
-                desc.textContent = "Description: " + wArray[i].description;
+                desc.textContent = "Description: " + wArray[wPos].description;
                 
                 var price = document.getElementById("widget-price");
-                price.textContent = "Price: " + wArray[i].pence_price / 100;
-                wPos = i;
+                price.textContent = "Price: " + wArray[wPos].pence_price / 100;
+                wPos = wPos;
             },
             nextWidget: function () {
-                i + 1 < wArray.length && i++;
-                console.log("next: " + i);
+                wPos + 1 < wArray.length && wPos++;
+                console.log("next: " + wPos);
                 var img = document.createElement("img");
-                img.src = wArray[i].url;
+                img.src = wArray[wPos].url;
                 img.setAttribute("style", "width: 50%;");
                 var imgDiv = document.getElementById("widget-img");
                 var existingImg = imgDiv.firstChild;
@@ -322,11 +323,11 @@ function ClientOrder() {
                 imgDiv.setAttribute("style", "text-align:left");
     
                 var desc = document.getElementById("widget-desc");
-                desc.textContent = "Description: " + wArray[i].description;
+                desc.textContent = "Description: " + wArray[wPos].description;
                 
                 var price = document.getElementById("widget-price");
-                price.textContent = "Price: " + wArray[i].pence_price / 100;
-                wPos = i;
+                price.textContent = "Price: " + wArray[wPos].pence_price / 100;
+                wPos = wPos;
             }
         }    
     }(0);
@@ -356,19 +357,22 @@ function ClientOrder() {
         updateMap();
     };
 
+    this.nextWidget = function () {
+        nextWidget();
+    };
+
     this.beginOrder = function () {
-        var clientid = document.getElementById("clientid").value;
+        //var clientid = document.getElementById("clientid").value;
         var oucu = document.getElementById("oucu").value;
-        //if (oucu.match(/[a-z].*[0-9]$/)) {
-        //    console.log("OUCU match found");
-        //}
-        //else {
-        //    console.log("OUCU match not found");
-        //}
-        var orders = getOrders();
-        console.log("Orders received");
+        if (oucu.match(/[a-z].*[0-9]$/)) {
+            console.log("OUCU match found");
+        }
+        else {
+            console.log("OUCU match not found");
+        }
 
-
+        
+        console.log("Orders: " + oArray);
 
         //getClientLocation(clientAddr);
         //console.log("client location: " + clientLat + " " + clientLon + " received");
