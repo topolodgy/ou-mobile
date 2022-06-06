@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+  <h:head>
+    <title>Facelet Title</title>
+  </h:head>
+  <h:body>
+    <h1>Widget order confirmation page</h1>    
+
+    <h2>Thank you for your order. Here are your details:</h2>
+
+    <p>
+      <h:outputText value="Customer name: #{widgetFormBean.name}"/>
+    </p>
+
+    <c:if test="#{widgetFormBean.dateOfBirth != null}">
+      <p>
+        <h:outputText value="Date of birth: #{widgetFormBean.dateString}"/>      
+      </p>
+    </c:if>
+
+    <p>
+      <h:outputText value="Email: #{widgetFormBean.email}"/>
+    </p>  
+
+
+    <p>       
+      <h:outputText value="#{(empty widgetFormBean.mobile) ? 
+                             '' : 'Mobile: '.concat(widgetFormBean.mobile)}" />
+    </p>
+
+    <p>       
+      <h:outputText value="#{(empty widgetFormBean.address) ? 
+                             '' : 'Address: '.concat(widgetFormBean.address)}" />
+    </p>
+
+    <p>
+      <h:outputText value="Contact preferences:"/>
+
+      <c:if test="${widgetFormBean.contactEmail == true}">
+        <h:outputText value="email "/>
+      </c:if>
+
+      <c:if test="${widgetFormBean.contactPhone == true}">
+        <h:outputText value="phone "/>
+      </c:if>
+
+      <c:if test="${widgetFormBean.contactPost == true}">
+        <h:outputText value="post "/>
+      </c:if>
+
+      <c:if test="${widgetFormBean.contactOther == true}">
+        <h:outputText value="other "/>
+      </c:if>
+
+    </p>
+   
+    <p>
+      <h:outputText value="Colour importance: #{widgetFormBean.colourImportance}"/>
+    </p>
+
+    <p>
+      <h:outputText value="Widget colour: #{widgetFormBean.htmlColour}"/>
+    </p>
+
+    <p>       
+      <h:outputText value="#{(empty widgetFormBean.deliveryDate) ? 
+                             '' : 'Delivery date: '.concat(widgetFormBean.deliveryDate)}" />
+    </p>
+
+    <p>       
+      <h:outputText value="#{(empty widgetFormBean.deliveryTime) ? 
+                             '' : 'Delivery time: '.concat(widgetFormBean.deliveryTime)}" />
+    </p>
+
+    <h:outputText value="====================================="/>        
+
+    <p> 
+      <p>
+        <h:outputText value="#{widgetFormBean.genericResponse}"/>        
+      </p>
+      <p>
+        <h:outputText style="font-weight:bold" value="Total cost: #{widgetFormBean.totalCost} bazingas"/>        
+      </p>
+    </p>
+
+    <p>Come back soon!</p> 
+
+    <p>Visit the <a href="../index.html"> home page</a> here. </p>
+  </h:body>
+</html>

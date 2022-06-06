@@ -1,0 +1,1477 @@
+<schedule>
+	<service type="tv" key="bbcone">
+		<title>BBC One</title>
+		<outlet key="london">
+			<title>London</title>
+		</outlet>
+	</service>
+	<day date="2015-10-27" has_next="1" has_previous="1">
+		<broadcasts>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035g92w</pid>
+				<start>2015-10-27T00:10:00Z</start>
+				<end>2015-10-27T00:15:00Z</end>
+				<duration>300</duration>
+				<programme type="episode">
+					<pid>b06kh3wn</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>Detailed weather forecast.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>300</duration>
+					<image>
+						<pid>p01lc82r</pid>
+					</image>
+					<display_titles>
+						<title>Weather for the Week Ahead</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T00:10:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b008flb5</pid>
+						<title>Weather for the Week Ahead</title>
+						<position/>
+						<image>
+							<pid>p01lc82r</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2007-11-11T12:20:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035g92x</pid>
+				<start>2015-10-27T00:15:00Z</start>
+				<end>2015-10-27T06:00:00Z</end>
+				<duration>20700</duration>
+				<programme type="episode">
+					<pid>b06kh3ws</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>BBC One joins the BBC's rolling news channel for a night of news.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>21000</duration>
+					<image>
+						<pid>p01m1rbq</pid>
+					</image>
+					<display_titles>
+						<title>Joins BBC News</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T00:15:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_news24" key="bbcnews">
+							<title>BBC News Channel</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b00h9fxh</pid>
+						<title>Joins BBC News</title>
+						<position/>
+						<image>
+							<pid>p01m1rbq</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2008-06-11T04:50:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_news24" key="bbcnews">
+								<title>BBC News Channel</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j592</pid>
+				<start>2015-10-27T06:00:00Z</start>
+				<end>2015-10-27T09:15:00Z</end>
+				<duration>11700</duration>
+				<programme type="episode">
+					<pid>b06kh41h</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>The latest news, sport, business and weather from the BBC's Breakfast team.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>11700</duration>
+					<image>
+						<pid>p01vlgx0</pid>
+					</image>
+					<display_titles>
+						<title>Breakfast</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T06:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b006v5tb</pid>
+						<title>Breakfast</title>
+						<position/>
+						<image>
+							<pid>p01vlgx0</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2006-04-06T06:00:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j593</pid>
+				<start>2015-10-27T09:15:00Z</start>
+				<end>2015-10-27T10:00:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b04hzlvv</pid>
+					<position>5</position>
+					<title>Episode 5</title>
+					<short_synopsis>The team investigate whether extended warranties are worth the money.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2700</duration>
+					<image>
+						<pid>p01nmrzl</pid>
+					</image>
+					<display_titles>
+						<title>Rip Off Britain</title>
+						<subtitle>Series 6, Episode 5</subtitle>
+					</display_titles>
+					<first_broadcast_date>2014-09-19T09:15:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b04hz7vf</pid>
+						<title>Series 6</title>
+						<position>6</position>
+						<image>
+							<pid>p01nmrzl</pid>
+						</image>
+						<expected_child_count>20</expected_child_count>
+						<first_broadcast_date>2014-09-15T09:15:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+						<programme type="brand">
+							<pid>b00wck32</pid>
+							<title>Rip Off Britain</title>
+							<position/>
+							<image>
+								<pid>p01nmrzl</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2009-11-30T09:15:00Z</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j594</pid>
+				<start>2015-10-27T10:00:00Z</start>
+				<end>2015-10-27T11:00:00Z</end>
+				<duration>3600</duration>
+				<programme type="episode">
+					<pid>b06mxtp1</pid>
+					<position>44</position>
+					<title>Episode 44</title>
+					<short_synopsis>The team look at properties in Glasgow, Hanley and Hastings.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>3600</duration>
+					<image>
+						<pid>p02pp2kg</pid>
+					</image>
+					<display_titles>
+						<title>Homes Under the Hammer</title>
+						<subtitle>Series 19, Episode 44</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T10:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b05rn40m</pid>
+						<title>Series 19</title>
+						<position>29</position>
+						<image>
+							<pid>p02pp2kg</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2015-04-13T10:00:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b006v5kb</pid>
+							<title>Homes Under the Hammer</title>
+							<position/>
+							<image>
+								<pid>p02pp2kg</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2006-03-29T10:00:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j595</pid>
+				<start>2015-10-27T11:00:00Z</start>
+				<end>2015-10-27T11:45:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b04gtzyx</pid>
+					<position>3</position>
+					<title>Episode 3</title>
+					<short_synopsis>Matt Allwright meets a man who is given a warning for feeding mice.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2700</duration>
+					<image>
+						<pid>p025hjhj</pid>
+					</image>
+					<display_titles>
+						<title>The Housing Enforcers</title>
+						<subtitle>Series 1, Episode 3</subtitle>
+					</display_titles>
+					<first_broadcast_date>2014-09-03T09:15:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b04gyrm4</pid>
+						<title>Series 1</title>
+						<position>1</position>
+						<image>
+							<pid>p025hjhj</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2014-09-01T09:15:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+						<programme type="brand">
+							<pid>b05v3x8q</pid>
+							<title>The Housing Enforcers</title>
+							<position/>
+							<image>
+								<pid>p02q38hl</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2014-09-01T09:15:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j596</pid>
+				<start>2015-10-27T11:45:00Z</start>
+				<end>2015-10-27T12:15:00Z</end>
+				<duration>1800</duration>
+				<programme type="episode">
+					<pid>b04gv0kh</pid>
+					<position>4</position>
+					<title>Episode 4</title>
+					<short_synopsis>A man caught on camera stealing wedding dresses is about to have his big day ruined.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1800</duration>
+					<image>
+						<pid>p01t6397</pid>
+					</image>
+					<display_titles>
+						<title>Caught Red Handed</title>
+						<subtitle>Series 3, Episode 4</subtitle>
+					</display_titles>
+					<first_broadcast_date>2014-09-04T11:45:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b04gyt2x</pid>
+						<title>Series 3</title>
+						<position>3</position>
+						<image>
+							<pid>p01t6397</pid>
+						</image>
+						<expected_child_count>20</expected_child_count>
+						<first_broadcast_date>2014-09-01T11:45:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+						<programme type="brand">
+							<pid>b03k4zfh</pid>
+							<title>Caught Red Handed</title>
+							<position/>
+							<image>
+								<pid>p01t6397</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2013-03-11T11:00:00Z</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j597</pid>
+				<start>2015-10-27T12:15:00Z</start>
+				<end>2015-10-27T13:00:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b044j1y2</pid>
+					<position>3</position>
+					<title>Ardingly 15</title>
+					<short_synopsis>Tim Wonnacott is joined by experts Anita Manning and Christina Trevanion in Ardingly.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2640</duration>
+					<image>
+						<pid>p020s72r</pid>
+					</image>
+					<display_titles>
+						<title>Bargain Hunt</title>
+						<subtitle>Series 38, Ardingly 15</subtitle>
+					</display_titles>
+					<first_broadcast_date>2014-05-23T12:15:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b044j159</pid>
+						<title>Series 38</title>
+						<position>38</position>
+						<image>
+							<pid>p020s72r</pid>
+						</image>
+						<expected_child_count>32</expected_child_count>
+						<first_broadcast_date>2014-05-19T12:15:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b006nb9z</pid>
+							<title>Bargain Hunt</title>
+							<position/>
+							<image>
+								<pid>p03bqkvs</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2006-04-05T12:15:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j598</pid>
+				<start>2015-10-27T13:00:00Z</start>
+				<end>2015-10-27T13:30:00Z</end>
+				<duration>1800</duration>
+				<programme type="episode">
+					<pid>b06kh41t</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>National and international news stories from the BBC News team, followed by weather.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1800</duration>
+					<image>
+						<pid>p01lc2hd</pid>
+					</image>
+					<display_titles>
+						<title>BBC News at One</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T13:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="" id="bbc_news" key="news">
+							<title>BBC News</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b007mpl9</pid>
+						<title>BBC News at One</title>
+						<position/>
+						<image>
+							<pid>p01lc2hd</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2006-12-04T13:00:00Z</first_broadcast_date>
+						<ownership>
+							<service type="" id="bbc_news" key="news">
+								<title>BBC News</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j599</pid>
+				<start>2015-10-27T13:30:00Z</start>
+				<end>2015-10-27T13:45:00Z</end>
+				<duration>900</duration>
+				<programme type="episode">
+					<pid>b06khzpc</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>The latest news, sport and weather from London.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>900</duration>
+					<image>
+						<pid>p01lcjj4</pid>
+					</image>
+					<display_titles>
+						<title>London News</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T13:30:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b006mj67</pid>
+						<title>London News</title>
+						<position/>
+						<image>
+							<pid>p01lcjj4</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2007-01-02T18:30:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59b</pid>
+				<start>2015-10-27T13:45:00Z</start>
+				<end>2015-10-27T14:15:00Z</end>
+				<duration>1800</duration>
+				<programme type="episode">
+					<pid>b06mtd2c</pid>
+					<position>124</position>
+					<title>All in a Day's Work</title>
+					<short_synopsis>Rob is puzzled by a colleague's grief. Valerie returns, and she has not changed a bit.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1680</duration>
+					<image>
+						<pid>p035ql9x</pid>
+					</image>
+					<display_titles>
+						<title>Doctors</title>
+						<subtitle>Series 17, All in a Day's Work</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T13:45:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b05rbg9b</pid>
+						<title>Series 17</title>
+						<position>17</position>
+						<image>
+							<pid>p01tgv47</pid>
+						</image>
+						<expected_child_count>217</expected_child_count>
+						<first_broadcast_date>2015-04-13T13:45:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b006mh9v</pid>
+							<title>Doctors</title>
+							<position/>
+							<image>
+								<pid>p01tgv47</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2006-04-05T14:05:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59f</pid>
+				<start>2015-10-27T14:15:00Z</start>
+				<end>2015-10-27T15:00:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b06n41lg</pid>
+					<position>12</position>
+					<title>Episode 12</title>
+					<short_synopsis>Gabby Logan with the quiz where contestants need brainpower and ball skills to win.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2640</duration>
+					<image>
+						<pid>p034l5g6</pid>
+					</image>
+					<display_titles>
+						<title>The Edge</title>
+						<subtitle>Series 2, Episode 12</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T14:15:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b06jp194</pid>
+						<title>Series 2</title>
+						<position>2</position>
+						<image>
+							<pid>p034l5g6</pid>
+						</image>
+						<expected_child_count>25</expected_child_count>
+						<first_broadcast_date>2015-10-12T14:15:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b06jp0s3</pid>
+							<title>The Edge</title>
+							<position/>
+							<image>
+								<pid>p034l5g6</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2015-03-16T14:15:00Z</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j59g</pid>
+				<start>2015-10-27T15:00:00Z</start>
+				<end>2015-10-27T15:45:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b01mmvm6</pid>
+					<position>3</position>
+					<title>Warwickshire</title>
+					<short_synopsis>Jules Hudson helps a couple relocate from Shanghai to Warwickshire.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2640</duration>
+					<image>
+						<pid>p01lcf37</pid>
+					</image>
+					<display_titles>
+						<title>Escape to the Country</title>
+						<subtitle>Series 13, Warwickshire</subtitle>
+					</display_titles>
+					<first_broadcast_date>2012-09-05T11:00:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_two" key="bbctwo">
+							<title>BBC Two</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b01mmtv2</pid>
+						<title>Series 13</title>
+						<position>16</position>
+						<image>
+							<pid>p01lcf37</pid>
+						</image>
+						<expected_child_count>75</expected_child_count>
+						<first_broadcast_date>2012-09-03T11:00:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b006vb2f</pid>
+							<title>Escape to the Country</title>
+							<position/>
+							<image>
+								<pid>p01lcf37</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2005-01-28T18:25:00Z</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_two" key="bbctwo">
+									<title>BBC Two</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59h</pid>
+				<start>2015-10-27T15:45:00Z</start>
+				<end>2015-10-27T16:30:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b06n37wk</pid>
+					<position>2</position>
+					<title>Nigel Havers</title>
+					<short_synopsis>Nigel Havers travels back to Suffolk to reminisce about an eventful childhood.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2700</duration>
+					<image>
+						<pid>p035qlgg</pid>
+					</image>
+					<display_titles>
+						<title>My Life on a Plate</title>
+						<subtitle>Nigel Havers</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T15:45:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b06ncdbz</pid>
+						<title>My Life on a Plate</title>
+						<position/>
+						<image>
+							<pid>p035tk0z</pid>
+						</image>
+						<expected_child_count>15</expected_child_count>
+						<first_broadcast_date>2015-10-26T15:45:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j59j</pid>
+				<start>2015-10-27T16:30:00Z</start>
+				<end>2015-10-27T17:15:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b044mqhc</pid>
+					<position>12</position>
+					<title>Episode 12</title>
+					<short_synopsis>Charlie Ross and Margie Cooper begin in the Scottish capital at Edinburgh.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2700</duration>
+					<image>
+						<pid>p01m1yss</pid>
+					</image>
+					<display_titles>
+						<title>Antiques Road Trip</title>
+						<subtitle>Series 8, Episode 12</subtitle>
+					</display_titles>
+					<first_broadcast_date>2014-05-20T16:30:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_two" key="bbctwo">
+							<title>BBC Two</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b03wynzx</pid>
+						<title>Series 8</title>
+						<position>8</position>
+						<image>
+							<pid>p01m1yss</pid>
+						</image>
+						<expected_child_count>30</expected_child_count>
+						<first_broadcast_date>2014-02-24T16:30:00Z</first_broadcast_date>
+						<programme type="brand">
+							<pid>b00xgqvf</pid>
+							<title>Antiques Road Trip</title>
+							<position/>
+							<image>
+								<pid>p01m1yss</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2010-03-08T18:30:00Z</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_two" key="bbctwo">
+									<title>BBC Two</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59k</pid>
+				<start>2015-10-27T17:15:00Z</start>
+				<end>2015-10-27T18:00:00Z</end>
+				<duration>2700</duration>
+				<programme type="episode">
+					<pid>b06myktt</pid>
+					<position>23</position>
+					<title>Episode 23</title>
+					<short_synopsis>Quiz in which contestants try to score as few points as possible.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>2700</duration>
+					<image>
+						<pid>p01tlxfz</pid>
+					</image>
+					<display_titles>
+						<title>Pointless</title>
+						<subtitle>Series 14, Episode 23</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T17:15:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b0649b0n</pid>
+						<title>Series 14</title>
+						<position>14</position>
+						<image>
+							<pid>p01tlxfz</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2015-07-29T17:15:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b00rhg2r</pid>
+							<title>Pointless</title>
+							<position/>
+							<image>
+								<pid>p01tlxfz</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2009-08-24T16:30:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59l</pid>
+				<start>2015-10-27T18:00:00Z</start>
+				<end>2015-10-27T18:30:00Z</end>
+				<duration>1800</duration>
+				<programme type="episode">
+					<pid>b06kh429</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>National and international news stories from the BBC News team, followed by weather.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1800</duration>
+					<image>
+						<pid>p01lc2j5</pid>
+					</image>
+					<display_titles>
+						<title>BBC News at Six</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T18:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="" id="bbc_news" key="news">
+							<title>BBC News</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b007mpkn</pid>
+						<title>BBC News at Six</title>
+						<position/>
+						<image>
+							<pid>p01lc2j5</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2007-03-28T18:00:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="" id="bbc_news" key="news">
+								<title>BBC News</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59m</pid>
+				<start>2015-10-27T18:30:00Z</start>
+				<end>2015-10-27T19:00:00Z</end>
+				<duration>1800</duration>
+				<programme type="episode">
+					<pid>b06khzph</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>The latest news, sport and weather from London.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1800</duration>
+					<image>
+						<pid>p01lcjj4</pid>
+					</image>
+					<display_titles>
+						<title>London News</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T18:30:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b006mj67</pid>
+						<title>London News</title>
+						<position/>
+						<image>
+							<pid>p01lcjj4</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2007-01-02T18:30:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59n</pid>
+				<start>2015-10-27T19:00:00Z</start>
+				<end>2015-10-27T19:30:00Z</end>
+				<duration>1800</duration>
+				<programme type="episode">
+					<pid>b06kh42j</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>Alex Jones and Angellica Bell are joined by writer and cook Nigella Lawson.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1800</duration>
+					<image>
+						<pid>p036fq3d</pid>
+					</image>
+					<display_titles>
+						<title>The One Show</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T19:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b007tcw7</pid>
+						<title>The One Show</title>
+						<position/>
+						<image>
+							<pid>p03dt3ws</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2006-08-14T18:55:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59q</pid>
+				<start>2015-10-27T19:30:00Z</start>
+				<end>2015-10-27T19:57:00Z</end>
+				<duration>1620</duration>
+				<programme type="episode">
+					<pid>b06mzd0m</pid>
+					<position>5162</position>
+					<title>27/10/2015</title>
+					<short_synopsis>The Mitchell family come to terms with everything that has happened.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1800</duration>
+					<image>
+						<pid>p035qlj7</pid>
+					</image>
+					<display_titles>
+						<title>EastEnders</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T19:30:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b006m86d</pid>
+						<title>EastEnders</title>
+						<position/>
+						<image>
+							<pid>p01vg679</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>1985-02-19T19:00:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59r</pid>
+				<start>2015-10-27T19:57:00Z</start>
+				<end>2015-10-27T20:00:00Z</end>
+				<duration>180</duration>
+				<programme type="episode">
+					<pid>b06kh42n</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>The latest national and international news stories from the BBC, followed by Weather.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>180</duration>
+					<image>
+						<pid>p01tlf61</pid>
+					</image>
+					<display_titles>
+						<title>BBC News and Regional News</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T19:57:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b009sdnj</pid>
+						<title>BBC News and Regional News</title>
+						<position/>
+						<image>
+							<pid>p01tlf61</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2006-12-17T12:00:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59s</pid>
+				<start>2015-10-27T20:00:00Z</start>
+				<end>2015-10-27T21:00:00Z</end>
+				<duration>3600</duration>
+				<programme type="episode">
+					<pid>b06mf8rv</pid>
+					<position>3</position>
+					<title>Calling Time</title>
+					<short_synopsis>Cara has to think on her feet when gangster Sean returns to Holby looking for his wife.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>3600</duration>
+					<image>
+						<pid>p035qlw1</pid>
+					</image>
+					<display_titles>
+						<title>Holby City</title>
+						<subtitle>Series 18, Calling Time</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T20:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b06j2q6w</pid>
+						<title>Series 18</title>
+						<position>18</position>
+						<image>
+							<pid>p03zzz51</pid>
+						</image>
+						<expected_child_count>52</expected_child_count>
+						<first_broadcast_date>2015-10-13T20:00:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b006mhd6</pid>
+							<title>Holby City</title>
+							<position/>
+							<image>
+								<pid>p03zzz51</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2005-12-06T20:00:00Z</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59t</pid>
+				<start>2015-10-27T21:00:00Z</start>
+				<end>2015-10-27T22:00:00Z</end>
+				<duration>3600</duration>
+				<programme type="episode">
+					<pid>b06n346n</pid>
+					<position>3</position>
+					<title>Episode 3</title>
+					<short_synopsis>Unlocking her voicemails throws suspicion on somebody close to Stevie.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>3600</duration>
+					<image>
+						<pid>p035v7hh</pid>
+					</image>
+					<display_titles>
+						<title>River</title>
+						<subtitle>Episode 3</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T21:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b06jkk8f</pid>
+						<title>River</title>
+						<position/>
+						<image>
+							<pid>p034fnwd</pid>
+						</image>
+						<expected_child_count>6</expected_child_count>
+						<first_broadcast_date>2015-10-13T21:00:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59v</pid>
+				<start>2015-10-27T22:00:00Z</start>
+				<end>2015-10-27T22:25:00Z</end>
+				<duration>1500</duration>
+				<programme type="episode">
+					<pid>b06kh42v</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>Latest national and international news, with reports from BBC correspondents worldwide.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>1500</duration>
+					<image>
+						<pid>p01lc2jf</pid>
+					</image>
+					<display_titles>
+						<title>BBC News at Ten</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T22:00:00Z</first_broadcast_date>
+					<ownership>
+						<service type="" id="bbc_news" key="news">
+							<title>BBC News</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b007mplc</pid>
+						<title>BBC News at Ten</title>
+						<position/>
+						<image>
+							<pid>p01lc2jf</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2006-12-05T22:00:00Z</first_broadcast_date>
+						<ownership>
+							<service type="" id="bbc_news" key="news">
+								<title>BBC News</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59w</pid>
+				<start>2015-10-27T22:25:00Z</start>
+				<end>2015-10-27T22:32:00Z</end>
+				<duration>420</duration>
+				<programme type="episode">
+					<pid>b06khzpk</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>The latest news, sport and weather from London.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>600</duration>
+					<image>
+						<pid>p01lcjj4</pid>
+					</image>
+					<display_titles>
+						<title>London News</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T22:25:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b006mj67</pid>
+						<title>London News</title>
+						<position/>
+						<image>
+							<pid>p01lcjj4</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2007-01-02T18:30:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59x</pid>
+				<start>2015-10-27T22:32:00Z</start>
+				<end>2015-10-27T22:35:00Z</end>
+				<duration>180</duration>
+				<programme type="episode">
+					<pid>b06kh433</pid>
+					<position/>
+					<title>27/10/2015</title>
+					<short_synopsis>The latest weather forecast.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>180</duration>
+					<image>
+						<pid>p01lc1hj</pid>
+					</image>
+					<display_titles>
+						<title>BBC Weather</title>
+						<subtitle>27/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T22:32:00Z</first_broadcast_date>
+					<ownership>
+						<service type="" id="bbc_webonly" key="">
+							<title>BBC</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b009h5f9</pid>
+						<title>BBC Weather</title>
+						<position/>
+						<image>
+							<pid>p01lc1hj</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2008-03-03T22:33:00Z</first_broadcast_date>
+						<ownership>
+							<service type="" id="bbc_webonly" key="">
+								<title>BBC</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j59y</pid>
+				<start>2015-10-27T22:35:00Z</start>
+				<end>2015-10-27T23:45:00Z</end>
+				<duration>4200</duration>
+				<programme type="episode">
+					<pid>b06myq5v</pid>
+					<position>1</position>
+					<title>Shylock's Ghost</title>
+					<short_synopsis>Howard Jacobson talks to Alan Yentob about his retelling of The Merchant of Venice.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>4200</duration>
+					<image>
+						<pid>p035qm8y</pid>
+					</image>
+					<display_titles>
+						<title>imagine...</title>
+						<subtitle>Autumn 2015, Shylock's Ghost</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-27T22:35:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b06myq5d</pid>
+						<title>Autumn 2015</title>
+						<position>40</position>
+						<image>
+							<pid>p01lcn30</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2015-10-27T22:35:00Z</first_broadcast_date>
+						<programme type="brand">
+							<pid>b007ght1</pid>
+							<title>imagine...</title>
+							<position/>
+							<image>
+								<pid>p01lcn30</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2006-05-23T22:45:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="1" is_blanked="0">
+				<pid>p035j59z</pid>
+				<start>2015-10-27T23:45:00Z</start>
+				<end>2015-10-28T00:45:00Z</end>
+				<duration>3600</duration>
+				<programme type="episode">
+					<pid>b06ks6ff</pid>
+					<position>10</position>
+					<title>Frances de la Tour</title>
+					<short_synopsis>Frances de la Tour's family tree holds a clue which hints at aristocratic ancestors.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>3540</duration>
+					<image>
+						<pid>p0358nqj</pid>
+					</image>
+					<display_titles>
+						<title>Who Do You Think You Are?</title>
+						<subtitle>Series 12, Frances de la Tour</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-22T21:00:00+01:00</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="series">
+						<pid>b0666x5d</pid>
+						<title>Series 12</title>
+						<position>12</position>
+						<image>
+							<pid>p01lchcf</pid>
+						</image>
+						<expected_child_count>10</expected_child_count>
+						<first_broadcast_date>2015-08-13T21:00:00+01:00</first_broadcast_date>
+						<programme type="brand">
+							<pid>b007t575</pid>
+							<title>Who Do You Think You Are?</title>
+							<position/>
+							<image>
+								<pid>p01lchcf</pid>
+							</image>
+							<expected_child_count/>
+							<first_broadcast_date>2006-04-12T02:50:00+01:00</first_broadcast_date>
+							<ownership>
+								<service type="tv" id="bbc_one" key="bbcone">
+									<title>BBC One</title>
+								</service>
+							</ownership>
+						</programme>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j5b0</pid>
+				<start>2015-10-28T00:45:00Z</start>
+				<end>2015-10-28T00:50:00Z</end>
+				<duration>300</duration>
+				<programme type="episode">
+					<pid>b06kh435</pid>
+					<position/>
+					<title>28/10/2015</title>
+					<short_synopsis>Detailed weather forecast.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>300</duration>
+					<image>
+						<pid>p01lc82r</pid>
+					</image>
+					<display_titles>
+						<title>Weather for the Week Ahead</title>
+						<subtitle>28/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-28T00:45:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_one" key="bbcone">
+							<title>BBC One</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b008flb5</pid>
+						<title>Weather for the Week Ahead</title>
+						<position/>
+						<image>
+							<pid>p01lc82r</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2007-11-11T12:20:00Z</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_one" key="bbcone">
+								<title>BBC One</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+			<broadcast is_repeat="0" is_blanked="0">
+				<pid>p035j5b1</pid>
+				<start>2015-10-28T00:50:00Z</start>
+				<end>2015-10-28T06:00:00Z</end>
+				<duration>18600</duration>
+				<programme type="episode">
+					<pid>b06kh439</pid>
+					<position/>
+					<title>28/10/2015</title>
+					<short_synopsis>BBC One joins the BBC's rolling news channel for a night of news.</short_synopsis>
+					<media_type>audio_video</media_type>
+					<duration>18600</duration>
+					<image>
+						<pid>p01m1rbq</pid>
+					</image>
+					<display_titles>
+						<title>Joins BBC News</title>
+						<subtitle>28/10/2015</subtitle>
+					</display_titles>
+					<first_broadcast_date>2015-10-28T00:50:00Z</first_broadcast_date>
+					<ownership>
+						<service type="tv" id="bbc_news24" key="bbcnews">
+							<title>BBC News Channel</title>
+						</service>
+					</ownership>
+					<programme type="brand">
+						<pid>b00h9fxh</pid>
+						<title>Joins BBC News</title>
+						<position/>
+						<image>
+							<pid>p01m1rbq</pid>
+						</image>
+						<expected_child_count/>
+						<first_broadcast_date>2008-06-11T04:50:00+01:00</first_broadcast_date>
+						<ownership>
+							<service type="tv" id="bbc_news24" key="bbcnews">
+								<title>BBC News Channel</title>
+							</service>
+						</ownership>
+					</programme>
+					<is_available_mediaset_pc_sd>0</is_available_mediaset_pc_sd>
+					<is_legacy_media>0</is_legacy_media>
+				</programme>
+			</broadcast>
+		</broadcasts>
+	</day>
+</schedule>

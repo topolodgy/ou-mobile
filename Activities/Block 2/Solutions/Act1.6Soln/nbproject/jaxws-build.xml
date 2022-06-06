@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-wsdl" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/wsdl"/>
+        <property name="wsdl-wsdl" location="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx.ver_2017-10-01.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl" destdir="${build.generated.dir}/jax-wsCache/wsdl" wsdl="${wsdl-wsdl}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx?ver=2017-10-01" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-wsdl}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/wsdl"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/wsdl">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-wsdl" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/wsdl"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/thalesgroup/rtti/2017-10-01/ldb"/>
+    </target>
+    <target name="wsimport-client-wsdl_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/wsdl_1"/>
+        <property name="wsdl-wsdl_1" location="xml-resources/web-service-references/wsdl_1/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx.ver_2017-10-01.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl_1" destdir="${build.generated.dir}/jax-wsCache/wsdl_1" wsdl="${wsdl-wsdl_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx?ver=2017-10-01" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-wsdl_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/wsdl_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/wsdl_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-wsdl_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/wsdl_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/thalesgroup/rtti/2017-10-01/ldb"/>
+    </target>
+    <target name="wsimport-client-wsdl_2" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/wsdl_2"/>
+        <property name="wsdl-wsdl_2" location="xml-resources/web-service-references/wsdl_2/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx.ver_2017-10-01.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl_2" destdir="${build.generated.dir}/jax-wsCache/wsdl_2" wsdl="${wsdl-wsdl_2}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx?ver=2017-10-01" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-wsdl_2}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/wsdl_2"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/wsdl_2">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-wsdl_2" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/wsdl_2"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/thalesgroup/rtti/2017-10-01/ldb"/>
+    </target>
+    <target name="wsimport-client-wsdl_3" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/wsdl_3"/>
+        <property name="wsdl-wsdl_3" location="xml-resources/web-service-references/wsdl_3/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx.ver_2017-10-01.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl_3" destdir="${build.generated.dir}/jax-wsCache/wsdl_3" wsdl="${wsdl-wsdl_3}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx?ver=2017-10-01" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-wsdl_3}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/wsdl_3"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/wsdl_3">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-wsdl_3" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/wsdl_3"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/thalesgroup/rtti/2017-10-01/ldb"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-wsdl, wsimport-client-wsdl_1, wsimport-client-wsdl_2, wsimport-client-wsdl_3"/>
+</project>

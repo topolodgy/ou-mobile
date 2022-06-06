@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Access Here API to retrieve a map. It is necessary to generate a key under your projects
+via your account in developer.here.com, to get the apikey value.
+https://developer.here.com/documentation/maps/topics/quick-start.html
+-->
+<html>
+    <head>
+        <title>My Here map page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+        type="text/javascript" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+        type="text/javascript" charset="utf-8"></script>    
+    </head>
+    <body>
+        <div>Map area</div>
+
+        <!-- an area mapContainer to contain the map -->
+        <div style="width: 640px; height: 480px" id="mapContainer"></div>
+
+        <!--https://developer.here.com/documentation/maps/topics_api/h-service-platform.html
+             H is a namespace for the HERE Maps -->
+        <script>            
+            var platform = new H.service.Platform({
+                'apikey': 'auMFOuPKkz3eEyK3HFsQSLx3mkDqi2Miyanast0RnaA'});
+
+            var defaultLayers = platform.createDefaultLayers();
+
+            // Instantiate (and display) a map object:
+            var map = new H.Map(
+                    document.getElementById('mapContainer'),
+                    defaultLayers.vector.normal.map,
+                    {
+                        zoom: 10,
+                        center: {lat: 50.8011, lng: 0.0419}
+                    });</script>
+    </body>
+</html>

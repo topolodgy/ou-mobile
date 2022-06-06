@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+An HTML login form
+-->
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h2>Our widget area is only available to registered salespeople.</h2>
+
+    <p>You'll need to login first...</p>
+    <form name="loginForm" method="POST" action="j_security_check">
+      <p>Please type your username: 
+        <input autofocus type="text" name="j_username" size="25"/></p>
+      <p>Please type your password:
+        <input type="password" size="15" name="j_password"/></p>
+      <p>
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/></p>
+    </form>
+  </body>
+</html>

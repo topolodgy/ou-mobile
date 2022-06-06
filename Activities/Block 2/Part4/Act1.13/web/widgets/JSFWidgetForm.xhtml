@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+XHTML form with alternative style sheet attached.
+XHTML is more strict than HTML and all elements need to be terminated
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+  <h:head>
+    <title>JSF Widget Form</title>
+    <!-- In this case, the stylesheet is expected to be in resources/css -->
+    <h:outputStylesheet library="css" name="anotherstyle.css"/>
+  </h:head>
+
+  <h:body>
+    <h1> JSF Widget Order Form </h1>
+
+    <h:form>
+      <fieldset>
+        <legend>Customer details</legend>
+
+        <label>Customer name:</label>
+        <input type="text" required="true" 
+               placeholder="First name - Second name" autofocus="true"
+               jsf:id="name" 
+               value="#{widgetFormBean.name}"/> 
+
+        <label>Date of birth:</label>
+        <input type="date" name="bday"
+               jsf:id="dateOfBirth" 
+               value="#{widgetFormBean.dateOfBirth}"> 
+          <f:convertDateTime pattern="yyyy-MM-dd" dateStyle="short"/>
+        </input>
+
+        <label>Email:</label>
+        <input type="email" required="true" name="email"
+               jsf:id="email" 
+               value="#{widgetFormBean.email}"/> 
+
+        <label>Mobile:</label>
+        <input type="text" name="mobile"
+               jsf:id="mobile" 
+               value="#{widgetFormBean.mobile}"/>
+
+        <label>Address:</label>
+        <textarea rows="4" cols="40" 
+                  placeholder="Provide first line of address and a valid postcode."
+                  jsf:id="address"
+                  value="#{widgetFormBean.address}">
+        </textarea>
+
+        <label><strong>Method to contact you: </strong></label>
+
+        <label>Email</label>
+        <input type="checkbox" name="contactEmail" 
+               jsf:id="contactEmail"
+               value="#{widgetFormBean.contactEmail}"/>
+
+        <label>Post</label>
+        <input type="checkbox" name="contactPost" 
+               jsf:id="contactPost"
+               value="#{widgetFormBean.contactPost}"/>
+
+        <label>Phone</label>
+        <input type="checkbox" name="contactPhone" 
+               jsf:id="contactPhone"
+               value="#{widgetFormBean.contactPhone}"/>
+
+        <label>Other</label>
+        <input type="checkbox" name="contactOther" 
+               jsf:id="contactOther"
+               value="#{widgetFormBean.contactOther}"/> 
+      </fieldset>
+
+      <fieldset name="widgetType">
+        <legend>Widget type</legend>
+        
+        <label>Widget size:</label>
+        <select name="widgetsize">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+        
+        <label>Number of widgets (up to 10)</label>            
+        <input type="number" name="quantity" min="1" max="10"
+               jsf:id="numWidgets"
+               value="#{widgetFormBean.numWidgets}"/>
+
+        <label for="colourImportance">Importance of widget colour?</label>
+        
+        <label>Unimportant</label>
+        <input type="range" min="0" max="100"
+               jsf:id="colourImportance"
+               value="#{widgetFormBean.colourImportance}"         
+               />
+
+        <label>Choose widget colour:</label>        
+        <input type="color" name="favcolor" 
+               jsf:id="htmlColour"
+               value="#{widgetFormBean.htmlColour}"
+               converter="colourConverter"
+               />
+      </fieldset>         
+
+      <fieldset>
+        <legend>Estimated date and time of delivery</legend>
+
+        <label>Estimated delivery date:</label>
+        <input type="date" name="d_date"
+               jsf:id="deliveryDate"
+               value="#{widgetFormBean.deliveryDate}"/> 
+
+        <label>Estimated delivery time:</label>
+        <input type="time" name="d_time"
+               jsf:id="deliveryTime"
+               value="#{widgetFormBean.deliveryTime}"/>
+      </fieldset>         
+      <br/>
+
+      <!-- Instead of <input type="submit" value="Submit"/>-->
+      <h:commandButton value="Submit"
+                       action="#{widgetFormBean.processForm()}" />
+
+      <input type="reset" value="Reset"/>      
+    </h:form>
+
+    <br></br> <br></br> 
+    <p>Visit the <a href="../logout">logout page</a> here.  </p>
+    <p>Visit the <a href="../index.html"> home page</a> here. </p>
+
+  </h:body>
+</html>

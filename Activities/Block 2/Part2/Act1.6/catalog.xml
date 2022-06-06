@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx?ver=2017-10-01" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx.ver_2017-10-01.wsdl"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-10-01_ldb.wsdl" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-10-01_ldb.wsdl"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2007-10-10_ldb_common_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2007-10-10_ldb_common_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2015-11-27_ldb_common_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2015-11-27_ldb_common_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-10-01_ldb_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-10-01_ldb_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/darwin_token_types_2013-11-28.wsdl" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/darwin_token_types_2013-11-28.wsdl"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2016-02-16_ldb_common_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2016-02-16_ldb_common_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-02-02_ldb_common_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-02-02_ldb_common_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-10-01_ldb_common_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2017-10-01_ldb_common_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2012-01-13_ldb_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2012-01-13_ldb_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2015-11-27_ldb_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2015-11-27_ldb_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2016-02-16_ldb_types.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/rtti_2016-02-16_ldb_types.xsd"/>
+    <system systemId="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/darwin_token_types_2013-11-28.xsd" uri="xml-resources/web-service-references/wsdl/wsdl/lite.realtime.nationalrail.co.uk/OpenLDBWS/darwin_token_types_2013-11-28.xsd"/>
+</catalog>

@@ -1,0 +1,55 @@
+/*
+   Another example of how we can include styling information in the widget order 
+   form using CSS. Styles are provided here for the legend and fieldset elements. 
+   Also right-justify the labels and add some padding space to the right of them.
+   Left align the input boxes and textareas. 
+   The default width for input areas is overridden for inputs of type
+   checkbox.
+   Created on : 22-Jan-2016, 13:44:55
+   Author    : TM352
+*/
+
+/* all legends get a colour and size */
+legend {
+   color: darkviolet; 
+   font-size: x-large; 
+}
+
+/* all fieldsets get a background colour! */
+fieldset {
+   background-color: khaki;   
+}
+
+/* all labels are right-aligned, amongst other things */
+label{
+   display: inline-block;
+   float: left;
+   clear: left;
+   width: 200px;
+   padding-right:10px;
+   text-align: right;
+}
+
+/* all inputs and textareas have the same width and are left-aligned
+(but see below for exceptions) */
+input, textarea, select {
+   padding: 9px; 
+   width: 200px;
+   display: inline-block;
+   float: left;
+}
+
+/* all inputs whose type is checkbox don't get the larger width */
+input[type=checkbox]{
+   width:auto
+}
+
+/* input elements in the fieldset with the name widgetType
+   get the same width to look nicer */
+fieldset[name="widgetType"] > input{
+   width:62px
+}
+
+/*indicate an invalid field  
+:invalid { background-color: #FFD4D4;
+           border: 1px solid maroon; }*/

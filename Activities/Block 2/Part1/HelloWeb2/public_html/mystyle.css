@@ -1,0 +1,32 @@
+/*
+An example stylesheet
+*/
+body { 
+ background-color: white; 
+ color: #333333; 
+ font-family: sans-serif
+}
+
+ol, ul {
+   background: blue;
+   color: yellow;
+   width: fit-content   
+}
+
+label {
+   font-family: fantasy
+}
+
+h1, h2 {
+ border-bottom: dotted purple;
+}
+
+h1 {
+ font-family: monospace;
+ font-size: 40px;
+ color: red;
+}
+
+img {
+    width: 50%;
+}

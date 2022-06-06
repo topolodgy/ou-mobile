@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+A basic results page to present to the user after pressing Submit
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>(OLD) Widget Form Response Page</title>    
+
+</head>
+<body>  
+  <h2>Thank you for submitting the widget form</h2>
+  <p>This is visit number <script>
+    var n = localStorage.getItem('counter');
+
+    if (n === null)
+    {
+       localStorage.setItem('counter', 0);
+    } else
+    {
+       n = localStorage.getItem('counter');
+       n++;
+       localStorage.setItem('counter', n);
+    }
+    document.write(localStorage.getItem('counter'));
+    </script>
+  </p>
+
+  <p>It is <script>document.write(new Date());</script></p>
+
+  <p>There is no form processing on this form, so no actual order has been recorded. </p>
+
+  <p>Sorry we can't do more for you today....  </p>      
+
+  <p>You can return to our <a href="../index.html">home page</a> here. </p>   
+
+  <p> Visit the <a href="widget_form.html"> widget order form  </a> here.</p>
+
+  <p>You can visit the <a href="../logout">logout page</a> here.  
+
+  <p> Note, close the browser to logout... </p>
+</body>
+</html>
