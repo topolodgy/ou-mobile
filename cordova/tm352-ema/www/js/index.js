@@ -162,10 +162,10 @@ function ClientOrder() {
 
     function beginOrder(clientid, pass, oucu) {
 
-        var addr = getClientAddress(oucu, clientid);
+        //var addr = getClientAddress(oucu, clientid);
 
-        var location = getClientLocation(newClientAddr);
-        console.log("createOrder: Client Location: " + newClientAddr);
+        //var location = getClientLocation(newClientAddr);
+        //console.log("createOrder: Client Location: " + newClientAddr);
 
         function onSuccess(obj) {
             console.log("Order created!", obj);
@@ -174,7 +174,7 @@ function ClientOrder() {
         var oUrl = url + "orders?OUCU=" + oucu + "&password=" + pass;
 
         console.log("orders: Sending POST to " + oUrl);
-        $.ajax(oUrl, { type: "POST", data: {client_id: clientid, latitude: clientLat, longitude: clientLat, OUCU: oucu, password: pass}, success: onSuccess });
+        $.ajax(oUrl, { type: "POST", data: {client_id: clientid, latitude: 0, longitude: 0, OUCU: oucu, password: pass}, success: onSuccess });
         return onSuccess;
     }
 
@@ -301,6 +301,7 @@ function ClientOrder() {
             console.log("Order amended!", obj);
         }
 
+        var oUrl = url + "order_items";
         console.log("Order addition: Sending POST to " + oUrl);
         //FR1.5 Save order
         $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
