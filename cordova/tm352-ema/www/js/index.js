@@ -79,57 +79,21 @@ function ClientOrder() {
     var marker;
     var markers = [];
 
-    // TODO Lookup an address and add a marker to the map at the position of this address
-    function addMarkerToMap(address) {
-        if (address != null) {
-            console.log('Add marker function called');
-            // Hint: If you call the OpenStreetMap REST API too frequently, your access will be blocked.
-            //       We have provided a helper function to prevent this however if you open the app
-            //       on several browser windows at once you may still run into problems.
-            //       Consider hardcoding locations for testing.
-            // Hint: To ensure a marker will be cleared by clearMarkersFromMap, use:
-            //       markers.push(marker);
-            //       to add it to the markers array
-            var onSuccess = function (data) {
-                // TODO 2(a) FR2.2
-                // You need to implement this function
-                // See the TMA for an explanation of the functional requirements
+    function addOrderMarkers(lat, lon) {   
+            var point = {
+                lat: lat,
+                lng: lon,
+            };             
+            marker = new H.map.DomMarker(point, { icon: icon });
+            map.addObject(marker);
+            console.log('Marker added');
+            markers.push(marker);
+        };
 
-                var point = {
-                    lat: data[0].lat,
-                    lng: data[0].lon,
-                };
-                
-                marker = new H.map.DomMarker(point, { icon: icon });
-                map.addObject(marker);
-                console.log('Marker added');
-                markers.push(marker);
-                // Hint: If you can't see the markers on the map if using the browser platform,
-                //       try refreshing the page.
-            };
-
-            // Hint: We have provided the helper function nominatim.get which uses
-            //       the OpenStreetMap REST API to turn an address into co-ordinates.
-            //       It does this in such a way that requests are cached and sent to
-            //       the OpenStreetMap REST API no more than once every 5 seconds.
-            nominatim.get(address, onSuccess);
-        }
-    }
-
-    // Clear any markers added to the map (if added to the markers array)
-    function clearMarkersFromMap() {
-        // This is implemented for you and no further work is needed on it
-        markers.forEach(function (marker) {
-            if (marker) {
-                map.removeObject(marker);
-            }
-        });
-        markers = [];
-    }
 
     // Obtain the device location and centre the map
+    //FR2.1 - Display current salesperson's location
     function centreMap() {
-        // This is implemented for you and no further work is needed on it
 
         function onSuccess(position) {
             console.log("Obtained position", position);
@@ -145,124 +109,73 @@ function ClientOrder() {
 
         function onError(error) {
             console.error("Error calling getCurrentPosition", error);
-
             // Inform the user that an error occurred
             alert("Error obtaining location, please try again.");
         }
 
-        // Note: This can take some time to callback or may never callback,
-        //       if permissions are not set correctly on the phone/emulator/browser
         navigator.geolocation.getCurrentPosition(onSuccess, onError, {
             enableHighAccuracy: true,
         });
-    };
-
-    // TODO Update the map with addresses for orders from the Client Order API
-    function updateMap() {
-        // TODO adjust the following to get the required data from your HTML view
-        var oucu = document.getElementById("oucu").value;
-        SpinnerPlugin.activityStart("Looking for matches...");
-        // TODO 2(a) FR2.1
-        // You need to implement this function
-        // See the TMA for an explanation of the functional requirements
-        function onSuccess(obj) {
-            console.log("match: received obj", obj);
-            // Inform the user what happened
-            alert("Matches for OUCU " + oucu + " have been found.");
-            if (obj.status == "success") {
-                var matches = obj.data;
-
-                matches.forEach(function (match) {
-                    if (match.offer_address == 'open university') {
-                        addMarkerToMap('Open University, Milton Keynes');
-                    }
-                    else {
-                        addMarkerToMap('Milton Keynes Central Station');
-                    } 
-                });
-                
-                centreMap();
-                
-            } else if (obj.message) {
-                alert(obj.message);
-                clearMarkersFromMap();
-            } else {
-                alert("No matches for " + oucu);
-                clearMarkersFromMap();
-            }
-            SpinnerPlugin.activityStop();
-        }
-        // Post the OUCU to register with the Client Order API
-        var url = url + "matches?OUCU=" + oucu;
-        console.log("match: sending GET to " + url);
-        $.ajax(url, { type: "GET", data: {}, success: onSuccess });
-        // Hint: You will need to call addMarkerToMap and clearMarkersFromMap.
-        // Hint: If you cannot complete FR2.1, call addMarkerToMap with a fixed value
-        //       to allow yourself to move on to FR2.2.
-        //       e.g. addMarkerToMap("Milton Keynes Central");
     }
 
+    centreMap();
 
-    var newClientAddr;
 
-    function getClientAddress(oucu, clientid) {
+    // This section I was unable to complete successfully, and so had to resort to pinning the order_id variable used in my beginOrder function to a hardcoded value. 
+    // var newClientAddr;
 
-        function onListSuccess(obj) {
-            console.log("Received client object ", obj); 
-            newClientAddr = obj.data[0].address;
-            console.log("newClientAddr var is " + newClientAddr);
-        }
+    // function getClientAddress(clientid, pass, oucu) {
+
+       // function onListSuccess(obj) {
+        //     console.log("Received client object ", obj); 
+        //     newClientAddr = obj.data[0].address;
+        //     console.log("newClientAddr var is " + newClientAddr);
+        // }
 
         // Get client info:
-        var clientUrl = url + "clients/" + clientid + "?OUCU=sl23479&password=B1dSM4I4" ;
-        console.log("user: " + oucu + " sending GET to " + clientUrl + "for client ID " + clientid);
-        $.ajax(clientUrl, { type: "GET", data: {}, success: onListSuccess });
-        return onListSuccess;
-    }
+        // var clientUrl = url + "clients/" + clientid + "?OUCU=" + oucu + "&password=" + pass;
+        // console.log("user: " + oucu + " sending GET to " + clientUrl + "for client ID " + clientid);
+        // $.ajax(clientUrl, { type: "GET", data: {}, success: onListSuccess });
+        // return onListSuccess;
+    // }
 
+    // var clientLat = 0;
+    // var clientLon = 0;
 
+    // function getClientLocation() {
 
-    var clientLat = 0;
-    var clientLon = 0;
-
-    function getClientLocation() {
-
-        function onListSuccess(obj) {
-            console.log("received address is " + newClientAddr);
-            console.log("GET Client Info: received obj", obj);
-            clientLat =  obj[0].lat;
-            clientLon =  obj[0].lon;   
-            console.log("GET Client Info: Location identified", obj);   
-        }
+       //  function onSuccess(obj) {
+          //   console.log("received address is " + newClientAddr);
+          //   console.log("GET Client Info: received obj", obj);
+          //   clientLat =  obj[0].lat;
+          //   clientLon =  obj[0].lon;   
+          //   console.log("GET Client Info: Location identified", obj);   
+        // }
 
         // Get client Lat/Lon:
-        var geoUrl = "http://nominatim.openstreetmap.org/search/" + newClientAddr + "?format=json&countrycodes=gb";
-        console.log("Sending GET to Geo Service for address " + newClientAddr);
-        $.ajax(geoUrl, { type: "GET", data: {}, success: onListSuccess });
+        // var geoUrl = "http://nominatim.openstreetmap.org/search/" + newClientAddr + "?format=json&countrycodes=gb";
+        // console.log("Sending GET to Geo Service for address " + newClientAddr);
+        // $.ajax(geoUrl, { type: "GET", data: {}, success: onSuccess });
 
-        return onListSuccess;
-    }
+        // return onSuccess;
+    // }
 
-
-
-    function createOrder(oucu, clientid) {
+    function beginOrder(clientid, pass, oucu) {
 
         var addr = getClientAddress(oucu, clientid);
-        console.log("createOrder: Client Address: " + addr);
 
         var location = getClientLocation(newClientAddr);
         console.log("createOrder: Client Location: " + newClientAddr);
 
-        function onListSuccess(obj) {
+        function onSuccess(obj) {
             console.log("Order created!", obj);
         }
 
-        // Get all the orders relating to a salesperson:
-        var oUrl = url + "orders" ;
+        var oUrl = url + "orders?OUCU=" + oucu + "&password=" + pass;
 
         console.log("orders: Sending POST to " + oUrl);
-        $.ajax(oUrl, { type: "POST", data: {client_id: clientid, latitude: clientLat, longitude: clientLat, OUCU: "sl23479", password: "B1dSM4I4"}, success: onListSuccess });
-        return onListSuccess;
+        $.ajax(oUrl, { type: "POST", data: {client_id: clientid, latitude: clientLat, longitude: clientLat, OUCU: oucu, password: pass}, success: onSuccess });
+        return onSuccess;
     }
 
 
@@ -309,7 +222,7 @@ function ClientOrder() {
     getWidgets();
     var wPos = 0;
 
-    // Set widget array position, iterate across array and display widgets
+    // FR1.2 - Set widget array position, iterate across array and display widget descriptions, images, and prices.
     var index = function displayWidget (wPos) {
         return {
             prevWidget: function () {
@@ -361,13 +274,14 @@ function ClientOrder() {
         }    
     }(0);
 
-    
     document.getElementById('btn-next').addEventListener('click', index.nextWidget);
     document.getElementById('btn-prev').addEventListener('click', index.prevWidget);
 
 
+    // FR1.3 - Add widget to order
     function addToOrder(oucu, pass, number, price) {
 
+        //FR1.4 - Display VAT, totals
         var subtotal = number * price;
         console.log("addToOrder: subtotal is " + subtotal);
         document.getElementById("subtotal").innerHTML = subtotal + " GBP";
@@ -387,41 +301,22 @@ function ClientOrder() {
             console.log("Order amended!", obj);
         }
 
-        // Get all the orders relating to a salesperson:
-        var oUrl = url + "order_items" ;
-
         console.log("Order addition: Sending POST to " + oUrl);
+        //FR1.5 Save order
         $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
         return onSuccess;
     }
 
-    // Set initial HERE Map position
-    centreMap();
 
     // PUBLIC FUNCTIONS - available to the view
     // Note these are declared as this.functionName = function () { ... };
 
-    this.centreMap = function () {
-        // 2(a) FR3
-        // This is implemented for you and no further work is needed on it
-        // Update map now
-        centreMap();
-    };
-
-    // Controller function to update map with matches to request or offer
-    this.updateMap = function () {
-        // 2(a) FR3
-        // This is implemented for you and no further work is needed on it
-        // Update map now
-        updateMap();
-    };
-
-
-    this.createOrder = function () {
+    this.beginOrder = function () {
         var clientid = document.getElementById("clientid").value;
-        //var oucu = document.getElementById("oucu").value;
-        var oucu = "sl23479";
+        var oucu = document.getElementById("oucu").value;
         var pass = document.getElementById("pass").value;
+
+        //FR1.1 - Validate that the OUCU starts with a letter and ends with a number
         if (oucu.match(/[a-z].*[0-9]$/)) {
             console.log("OUCU match found");
         }
@@ -429,16 +324,21 @@ function ClientOrder() {
             console.log("OUCU match not found");
         }
 
-        createOrder(oucu, clientid);
+        beginOrder(clientid, pass, oucu);
 
+        //FR2.2 - Place markers for orders on the map
+        for(let i = 0; i < oArray.length; i++) {
+            var lat = oArray[i].latitude;
+            var lon = oArray[i].longitude
+            addOrderMarkers(lat, lon);
+        }
     };
   
 
+    //FR1.3 - Add a widget to the order
     this.addToOrder = function () {
         var oucu = document.getElementById("oucu").value;
-        //var oucu = "sl23479";
         var pass = document.getElementById("pass").value;
-        //var pass = "B1dSM4I4";
 
         var number = document.getElementById("number").value;
         console.log("addToOrder: number is " + number);
