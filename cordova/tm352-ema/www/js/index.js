@@ -117,8 +117,8 @@ function ClientOrder() {
     centreMap();
 
 
-    // This section I was unable to complete successfully, and so had to resort to pinning the order_id variable used in my beginOrder function to a hardcoded value. 
-    // I also had to do the same with the initial location of the order, in order to progress the FR for order placing.
+    // This section I was unable to complete successfully, and so had to resort to pinning the order_id variable used in my addToOrder function to a hardcoded value. 
+    // I also had to do the same with the initial location of the order, in order to progress the FR for order placing (beginOrder function).
 
     // function getClientAddress(clientid, pass, oucu) {
 
@@ -177,36 +177,35 @@ function ClientOrder() {
         return onSuccess;
     }
 
-        // FR1.3 - Add widget to order
-        function addToOrder(oucu, pass, number, price) {
+    // FR1.3 - Add widget to order
+    function addToOrder(oucu, pass, number, price) {
 
-            //FR1.4 - Display VAT, totals
-            var subtotal = number * price;
-            console.log("addToOrder: subtotal is " + subtotal);
-            document.getElementById("subtotal").innerHTML = subtotal + " GBP";
-    
-            var vat = subtotal * 0.2;
-            console.log("addToOrder: vat is " + vat);
-            document.getElementById("vat").innerHTML = vat + " GBP";
-    
-            var total = subtotal + vat;
-            console.log("addToOrder: total is " + total);
-            document.getElementById("total").innerHTML = total + " GBP";
-    
-            var widgetid = wArray[wPos].id;
-            console.log("Widget ID = " + widgetid);
-    
-            function onSuccess(obj) {
-                console.log("Order amended!", obj);
-            }
-    
-            var oUrl = url + "order_items";
-            console.log("Order addition: Sending POST to " + oUrl);
-            //FR1.5 Save order
-            $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
-            return onSuccess;
+        //FR1.4 - Display VAT, totals
+        var subtotal = number * price;
+        console.log("addToOrder: subtotal is " + subtotal);
+        document.getElementById("subtotal").innerHTML = subtotal + " GBP";
+
+        var vat = subtotal * 0.2;
+        console.log("addToOrder: vat is " + vat);
+        document.getElementById("vat").innerHTML = vat + " GBP";
+
+        var total = subtotal + vat;
+        console.log("addToOrder: total is " + total);
+        document.getElementById("total").innerHTML = total + " GBP";
+
+        var widgetid = wArray[wPos].id;
+        console.log("Widget ID = " + widgetid);
+
+        function onSuccess(obj) {
+            console.log("Order amended!", obj);
         }
 
+        var oUrl = url + "order_items";
+        console.log("Order addition: Sending POST to " + oUrl);
+        //FR1.5 Save order
+        $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
+        return onSuccess;
+    }
 
     //Initialise orders array 
     var oArray = [];
@@ -318,6 +317,7 @@ function ClientOrder() {
         }
         else {
             console.log("OUCU match not found");
+            alert("OUCU must start with a letter and end with a number");
         }
 
         beginOrder(clientid, pass, oucu);
@@ -343,5 +343,41 @@ function ClientOrder() {
 
         addToOrder(oucu, pass, number, price);
 
+    };
+
+    this.endOrder = function () {
+        var clientid = document.getElementById("clientid").value;
+        var oucu = document.getElementById("oucu").value;
+        var pass = document.getElementById("pass").value;
+
+        if (oucu.match(/[a-z].*[0-9]$/)) {
+            console.log("OUCU match found");
+        }
+        else {
+            console.log("OUCU match not found");
+            alert("OUCU must start with a letter and end with a number");
+        }
+
+        console.log("endOrder: clearing subtotal");
+        document.getElementById("subtotal").innerHTML = "";
+
+        //var vat = subtotal * 0.2;
+        console.log("endOrder: clearing VAT");
+        document.getElementById("vat").innerHTML = "";
+
+        //var total = subtotal + vat;
+        console.log("endOrder: clearing total");
+        document.getElementById("total").innerHTML = "";
+
+        console.log("Order ended!");
+
+        beginOrder(clientid, pass, oucu);
+
+        //FR2.2 - Place markers for orders on the map
+        for(let i = 0; i < oArray.length; i++) {
+            var lat = oArray[i].latitude;
+            var lon = oArray[i].longitude
+            addOrderMarkers(lat, lon);
+        }
     };
 }
