@@ -1,9 +1,5 @@
 /***********
- * OU TM352 Block 3, TMA03: index.js
- *
- * To function correctly this file must be placed in a Cordova project and the appopriate plugins installed.
- * You need to complete the code which is commented with TODO.
- * This includes the FRs and a few other minor changes related to your HTML design decisions.
+ * OU TM352 Block 3, EMA: index.js
  *
  * Released by Chris Thomson / Stephen Rice: Dec 2020
  * Modified by Chris Thomson: November 2021
@@ -122,7 +118,7 @@ function ClientOrder() {
 
 
     // This section I was unable to complete successfully, and so had to resort to pinning the order_id variable used in my beginOrder function to a hardcoded value. 
-    // var newClientAddr;
+    // I also had to do the same with the initial location of the order, in order to progress the FR for order placing.
 
     // function getClientAddress(clientid, pass, oucu) {
 
@@ -230,9 +226,6 @@ function ClientOrder() {
         return onListSuccess;
     }
 
-    // Populate orders array
-    //getOrders();
-
     //Initialise widget array    
     var wArray = [];
     
@@ -251,8 +244,7 @@ function ClientOrder() {
         return onListSuccess;
     }
 
-    // Populate widget array
-    //getWidgets();
+    // Set widget array position
     var wPos = 0;
 
     // FR1.2 - Set widget array position, iterate across array and display widget descriptions, images, and prices.
