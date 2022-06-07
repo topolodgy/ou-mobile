@@ -167,6 +167,9 @@ function ClientOrder() {
         //var location = getClientLocation(newClientAddr);
         //console.log("createOrder: Client Location: " + newClientAddr);
 
+        getOrders(pass, oucu);
+        getWidgets(pass, oucu);
+
         function onSuccess(obj) {
             console.log("Order created!", obj);
         }
@@ -178,11 +181,41 @@ function ClientOrder() {
         return onSuccess;
     }
 
+        // FR1.3 - Add widget to order
+        function addToOrder(oucu, pass, number, price) {
+
+            //FR1.4 - Display VAT, totals
+            var subtotal = number * price;
+            console.log("addToOrder: subtotal is " + subtotal);
+            document.getElementById("subtotal").innerHTML = subtotal + " GBP";
+    
+            var vat = subtotal * 0.2;
+            console.log("addToOrder: vat is " + vat);
+            document.getElementById("vat").innerHTML = vat + " GBP";
+    
+            var total = subtotal + vat;
+            console.log("addToOrder: total is " + total);
+            document.getElementById("total").innerHTML = total + " GBP";
+    
+            var widgetid = wArray[wPos].id;
+            console.log("Widget ID = " + widgetid);
+    
+            function onSuccess(obj) {
+                console.log("Order amended!", obj);
+            }
+    
+            var oUrl = url + "order_items";
+            console.log("Order addition: Sending POST to " + oUrl);
+            //FR1.5 Save order
+            $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
+            return onSuccess;
+        }
+
 
     //Initialise orders array 
     var oArray = [];
 
-    function getOrders() {
+    function getOrders(pass, oucu) {
 
         function onListSuccess(obj) {
             console.log("Got Orders Array: received obj", obj);
@@ -190,7 +223,7 @@ function ClientOrder() {
         }
 
         // Get all the orders relating to a salesperson:
-        var oUrl = url + "orders?OUCU=sl23479&password=B1dSM4I4" ;
+        var oUrl = url + "orders?OUCU=" + oucu + "&password=" + pass;
 
         console.log("orders: Sending GET to " + oUrl);
         $.ajax(oUrl, { type: "GET", data: {}, success: onListSuccess });
@@ -198,12 +231,12 @@ function ClientOrder() {
     }
 
     // Populate orders array
-    getOrders();
+    //getOrders();
 
     //Initialise widget array    
     var wArray = [];
     
-    function getWidgets() {
+    function getWidgets(pass, oucu) {
 
         function onListSuccess(obj) {
             console.log("Got Widgets Array: received obj", obj);
@@ -211,7 +244,7 @@ function ClientOrder() {
         }
 
         // Get all the widgets
-        var wUrl = url + "widgets?OUCU=sl23479&password=B1dSM4I4" ;
+        var wUrl = url + "widgets?OUCU=" + oucu + "&password=" + pass;
 
         console.log("widgets: Sending GET to " + wUrl);
         $.ajax(wUrl, { type: "GET", data: {}, success: onListSuccess });
@@ -219,7 +252,7 @@ function ClientOrder() {
     }
 
     // Populate widget array
-    getWidgets();
+    //getWidgets();
     var wPos = 0;
 
     // FR1.2 - Set widget array position, iterate across array and display widget descriptions, images, and prices.
@@ -277,36 +310,6 @@ function ClientOrder() {
     document.getElementById('btn-next').addEventListener('click', index.nextWidget);
     document.getElementById('btn-prev').addEventListener('click', index.prevWidget);
 
-
-    // FR1.3 - Add widget to order
-    function addToOrder(oucu, pass, number, price) {
-
-        //FR1.4 - Display VAT, totals
-        var subtotal = number * price;
-        console.log("addToOrder: subtotal is " + subtotal);
-        document.getElementById("subtotal").innerHTML = subtotal + " GBP";
-
-        var vat = subtotal * 0.2;
-        console.log("addToOrder: vat is " + vat);
-        document.getElementById("vat").innerHTML = vat + " GBP";
-
-        var total = subtotal + vat;
-        console.log("addToOrder: total is " + total);
-        document.getElementById("total").innerHTML = total + " GBP";
-
-        var widgetid = wArray[wPos].id;
-        console.log("Widget ID = " + widgetid);
-
-        function onSuccess(obj) {
-            console.log("Order amended!", obj);
-        }
-
-        var oUrl = url + "order_items";
-        console.log("Order addition: Sending POST to " + oUrl);
-        //FR1.5 Save order
-        $.ajax(oUrl, { type: "POST", data: {OUCU: oucu, password: pass, order_id: "541271537", widget_id: widgetid, number: number, pence_price: price}, success: onSuccess });
-        return onSuccess;
-    }
 
 
     // PUBLIC FUNCTIONS - available to the view
